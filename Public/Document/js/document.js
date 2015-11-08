@@ -90,13 +90,6 @@ Doc = {
         this.loading     = $loading;
         this.book        = $("title").data("book");
 
-        /* 非默认页则跳转到默认页 */
-        if(location.pathname.indexOf($menu.data("url")) < 0 && location.href.lastIndexOf('/') !== location.href.length - 1){
-            $("body").empty();
-            location.href = $menu.data("url") + "#" + self.article.data("name");
-            return false;
-        }
-
         /* 默认ajax设置 */
         $doc.ajaxStart(function(){$loading.show()});
         $doc.ajaxStop(function(){$loading.hide()});
@@ -298,11 +291,14 @@ Doc = {
                 success(data); //渲染数据
             } else {
                 $.get($item.children("div").find("a").attr("href"), function(data){
+					data=JSON.parse(data);
                     success(data); //渲染数据
                     $item.data("article", data); //缓存数据
-                }, "json");
+                });
             }
             //高亮当前节点
+					$item.siblings().addClass('closed');
+		$item.removeClass('closed');
             self.menu.data("ThinkTree").active($item);
             //设置网页标题
             $("title").text($item.children("div").text() + " - " + this.book);
