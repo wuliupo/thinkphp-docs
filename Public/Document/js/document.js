@@ -91,9 +91,9 @@ Doc = {
         this.book        = $("title").data("book");
 
         /* 非默认页则跳转到默认页 */
-        if(window.location.pathname !== $menu.data("url")){
+        if(location.pathname.indexOf($menu.data("url")) < 0 && location.href.lastIndexOf('/') !== location.href.length - 1){
             $("body").empty();
-            window.location.href = $menu.data("url") + "#" + self.article.data("name");
+            location.href = $menu.data("url") + "#" + self.article.data("name");
             return false;
         }
 
