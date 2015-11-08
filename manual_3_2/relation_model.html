@@ -1,0 +1,1029 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title data-book="ThinkPHP3.2完全开发手册">关联模型 - ThinkPHP3.2完全开发手册</title>
+    <link rel="stylesheet" href="/Public/Document/css/layout.css">
+    <link rel="stylesheet" href="/Public/Document/css/style.css">
+    <link rel="stylesheet" href="/Public/static/thinktree/skin/default/style.css">
+    <link rel="stylesheet" href="/Public/static/thinkeditor/skin/default/style.css">
+    <link rel="stylesheet" href="/Public/static/prettify/prettify.css">
+</head>
+<body>
+    <header class="layout">
+        <section class="header">
+            <hgroup>
+                <h1>ThinkPHP3.2完全开发手册</h1>
+                <h2>ThinkPHP系列开发手册在线版</h2>
+            </hgroup>
+			<div style="margin-top:10px;float:left;">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:468px;height:60px"
+     data-ad-client="ca-pub-2076739524120221"
+     data-ad-slot="4237148649"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+            <ul class="operation">
+                <!-- <li><a href="#"><i class="icon icon-file-chm"></i>下载CHM版</a></li>
+                <li><a href="#"><i class="icon icon-file-pdf"></i>下载PDF版</a></li> -->
+                <li class="user">
+                                            <a href="/user/login.html">登录</a>
+                        <!-- <a href="/user/register.html">注册</a> -->                </li>
+            </ul>
+        </section>
+    </header>
+    <aside class="search">
+        <input id="search" type="search" value="" placeholder="在这里输入搜索关键字" data-url="/index/search/book/1.html" />
+    </aside>
+    <aside class="layout">
+        <nav data-url="/manual_3_2.html">
+            <ul>
+    <li data-id="3" data-name="preface">
+            <div><a href="/manual_3_2/preface.html">序言</a></div>
+                    </li><li data-id="4" data-name="start">
+            <div><a href="/manual_3_2/start.html">基础</a></div>
+            <ul>
+    <li data-id="117" data-name="get_thinkphp">
+            <div><a href="/manual_3_2/get_thinkphp.html">获取ThinkPHP</a></div>
+                    </li><li data-id="116" data-name="environment">
+            <div><a href="/manual_3_2/environment.html">环境要求</a></div>
+                    </li><li data-id="115" data-name="directory_structure">
+            <div><a href="/manual_3_2/directory_structure.html">目录结构</a></div>
+                    </li><li data-id="114" data-name="entrance_file">
+            <div><a href="/manual_3_2/entrance_file.html">入口文件</a></div>
+                    </li><li data-id="107" data-name="auto_build">
+            <div><a href="/manual_3_2/auto_build.html">自动生成</a></div>
+                    </li><li data-id="123" data-name="app_module">
+            <div><a href="/manual_3_2/app_module.html">模块</a></div>
+                    </li><li data-id="122" data-name="controller_general">
+            <div><a href="/manual_3_2/controller_general.html">控制器</a></div>
+                    </li><li data-id="118" data-name="develop_standard">
+            <div><a href="/manual_3_2/develop_standard.html">开发规范</a></div>
+                    </li></ul>        </li><li data-id="143" data-name="config">
+            <div><a href="/manual_3_2/config.html">配置</a></div>
+            <ul>
+    <li data-id="149" data-name="config_format">
+            <div><a href="/manual_3_2/config_format.html">配置格式</a></div>
+                    </li><li data-id="148" data-name="load_config">
+            <div><a href="/manual_3_2/load_config.html">配置加载</a></div>
+                    </li><li data-id="147" data-name="read_config">
+            <div><a href="/manual_3_2/read_config.html">读取配置</a></div>
+                    </li><li data-id="146" data-name="set_config">
+            <div><a href="/manual_3_2/set_config.html">动态配置</a></div>
+                    </li><li data-id="145" data-name="extend_config">
+            <div><a href="/manual_3_2/extend_config.html">扩展配置</a></div>
+                    </li><li data-id="144" data-name="patch_config">
+            <div><a href="/manual_3_2/patch_config.html">批量配置</a></div>
+                    </li></ul>        </li><li data-id="17" data-name="architecture">
+            <div><a href="/manual_3_2/architecture.html">架构</a></div>
+            <ul>
+    <li data-id="104" data-name="modules">
+            <div><a href="/manual_3_2/modules.html">模块化设计</a></div>
+                    </li><li data-id="18" data-name="url">
+            <div><a href="/manual_3_2/url.html">URL模式</a></div>
+                    </li><li data-id="106" data-name="multi_mvc">
+            <div><a href="/manual_3_2/multi_mvc.html">多层MVC</a></div>
+                    </li><li data-id="105" data-name="cbd">
+            <div><a href="/manual_3_2/cbd.html">CBD模式</a></div>
+                    </li><li data-id="108" data-name="namespace">
+            <div><a href="/manual_3_2/namespace.html">命名空间</a></div>
+                    </li><li data-id="7" data-name="autoload">
+            <div><a href="/manual_3_2/autoload.html">自动加载</a></div>
+                    </li><li data-id="109" data-name="app_mode">
+            <div><a href="/manual_3_2/app_mode.html">应用模式</a></div>
+                    </li><li data-id="110" data-name="app_compile">
+            <div><a href="/manual_3_2/app_compile.html">项目编译</a></div>
+                    </li><li data-id="215" data-name="system_process">
+            <div><a href="/manual_3_2/system_process.html">系统流程</a></div>
+                    </li></ul>        </li><li data-id="8" data-name="route">
+            <div><a href="/manual_3_2/route.html">路由</a></div>
+            <ul>
+    <li data-id="141" data-name="route_define">
+            <div><a href="/manual_3_2/route_define.html">路由定义</a></div>
+                    </li><li data-id="139" data-name="rule_route">
+            <div><a href="/manual_3_2/rule_route.html">规则路由</a></div>
+                    </li><li data-id="140" data-name="regex_route">
+            <div><a href="/manual_3_2/regex_route.html">正则路由</a></div>
+                    </li><li data-id="138" data-name="static_route">
+            <div><a href="/manual_3_2/static_route.html">静态路由</a></div>
+                    </li><li data-id="137" data-name="support_closures">
+            <div><a href="/manual_3_2/support_closures.html">闭包支持</a></div>
+                    </li><li data-id="142" data-name="route_example">
+            <div><a href="/manual_3_2/route_example.html">实例说明</a></div>
+                    </li></ul>        </li><li data-id="9" data-name="controller">
+            <div><a href="/manual_3_2/controller.html">控制器</a></div>
+            <ul>
+    <li data-id="24" data-name="define_controller">
+            <div><a href="/manual_3_2/define_controller.html">控制器定义</a></div>
+                    </li><li data-id="26" data-name="before_after_action">
+            <div><a href="/manual_3_2/before_after_action.html">前置和后置操作</a></div>
+                    </li><li data-id="30" data-name="action_bind">
+            <div><a href="/manual_3_2/action_bind.html">Action参数绑定</a></div>
+                    </li><li data-id="112" data-name="url_suffix">
+            <div><a href="/manual_3_2/url_suffix.html">伪静态</a></div>
+                    </li><li data-id="174" data-name="url_case">
+            <div><a href="/manual_3_2/url_case.html">URL大小写</a></div>
+                    </li><li data-id="210" data-name="url_build">
+            <div><a href="/manual_3_2/url_build.html">URL生成</a></div>
+                    </li><li data-id="29" data-name="ajax_return">
+            <div><a href="/manual_3_2/ajax_return.html">AJAX返回</a></div>
+                    </li><li data-id="28" data-name="page_jump_redirect">
+            <div><a href="/manual_3_2/page_jump_redirect.html">跳转和重定向</a></div>
+                    </li><li data-id="15" data-name="input_var">
+            <div><a href="/manual_3_2/input_var.html">输入变量</a></div>
+                    </li><li data-id="113" data-name="request_method">
+            <div><a href="/manual_3_2/request_method.html">请求类型</a></div>
+                    </li><li data-id="27" data-name="empty_action">
+            <div><a href="/manual_3_2/empty_action.html">空操作</a></div>
+                    </li><li data-id="25" data-name="empty_controller">
+            <div><a href="/manual_3_2/empty_controller.html">空控制器</a></div>
+                    </li><li data-id="356" data-name="addon_controller">
+            <div><a href="/manual_3_2/addon_controller.html">插件控制器</a></div>
+                    </li><li data-id="322" data-name="action_bind_class">
+            <div><a href="/manual_3_2/action_bind_class.html">操作绑定到类</a></div>
+                    </li></ul>        </li><li data-id="10" data-name="model">
+            <div><a href="/manual_3_2/model.html">模型</a></div>
+            <ul>
+    <li data-id="31" data-name="define_model">
+            <div><a href="/manual_3_2/define_model.html">模型定义</a></div>
+                    </li><li data-id="175" data-name="model_instance">
+            <div><a href="/manual_3_2/model_instance.html">模型实例化</a></div>
+                    </li><li data-id="32" data-name="define_fields">
+            <div><a href="/manual_3_2/define_fields.html">字段定义</a></div>
+                    </li><li data-id="33" data-name="connect_db">
+            <div><a href="/manual_3_2/connect_db.html">连接数据库</a></div>
+                    </li><li data-id="202" data-name="switch_database">
+            <div><a href="/manual_3_2/switch_database.html">切换数据库</a></div>
+                    </li><li data-id="176" data-name="distributed_database">
+            <div><a href="/manual_3_2/distributed_database.html">分布式数据库支持</a></div>
+                    </li><li data-id="35" data-name="continuous_operation">
+            <div><a href="/manual_3_2/continuous_operation.html">连贯操作</a></div>
+            <ul>
+    <li data-id="177" data-name="where">
+            <div><a href="/manual_3_2/where.html">WHERE</a></div>
+                    </li><li data-id="178" data-name="table">
+            <div><a href="/manual_3_2/table.html">TABLE</a></div>
+                    </li><li data-id="179" data-name="alias">
+            <div><a href="/manual_3_2/alias.html">ALIAS</a></div>
+                    </li><li data-id="180" data-name="data">
+            <div><a href="/manual_3_2/data.html">DATA</a></div>
+                    </li><li data-id="181" data-name="field">
+            <div><a href="/manual_3_2/field.html">FIELD</a></div>
+                    </li><li data-id="182" data-name="order">
+            <div><a href="/manual_3_2/order.html">ORDER</a></div>
+                    </li><li data-id="183" data-name="limit">
+            <div><a href="/manual_3_2/limit.html">LIMIT</a></div>
+                    </li><li data-id="184" data-name="page">
+            <div><a href="/manual_3_2/page.html">PAGE</a></div>
+                    </li><li data-id="185" data-name="group">
+            <div><a href="/manual_3_2/group.html">GROUP</a></div>
+                    </li><li data-id="186" data-name="having">
+            <div><a href="/manual_3_2/having.html">HAVING</a></div>
+                    </li><li data-id="187" data-name="join">
+            <div><a href="/manual_3_2/join.html">JOIN</a></div>
+                    </li><li data-id="188" data-name="union">
+            <div><a href="/manual_3_2/union.html">UNION</a></div>
+                    </li><li data-id="189" data-name="distinct">
+            <div><a href="/manual_3_2/distinct.html">DISTINCT</a></div>
+                    </li><li data-id="190" data-name="lock">
+            <div><a href="/manual_3_2/lock.html">LOCK</a></div>
+                    </li><li data-id="191" data-name="cache">
+            <div><a href="/manual_3_2/cache.html">CACHE</a></div>
+                    </li><li data-id="211" data-name="comment">
+            <div><a href="/manual_3_2/comment.html">COMMENT</a></div>
+                    </li><li data-id="192" data-name="relation">
+            <div><a href="/manual_3_2/relation.html">RELATION</a></div>
+                    </li><li data-id="374" data-name="using">
+            <div><a href="/manual_3_2/using.html">USING</a></div>
+                    </li><li data-id="373" data-name="fetch_sql">
+            <div><a href="/manual_3_2/fetch_sql.html">fetchSql</a></div>
+                    </li><li data-id="372" data-name="token">
+            <div><a href="/manual_3_2/token.html">TOKEN</a></div>
+                    </li><li data-id="371" data-name="strict">
+            <div><a href="/manual_3_2/strict.html">STRICT</a></div>
+                    </li><li data-id="370" data-name="index">
+            <div><a href="/manual_3_2/index.html">INDEX</a></div>
+                    </li></ul>        </li><li data-id="37" data-name="name_range">
+            <div><a href="/manual_3_2/name_range.html">命名范围</a></div>
+                    </li><li data-id="34" data-name="curd">
+            <div><a href="/manual_3_2/curd.html">CURD操作</a></div>
+            <ul>
+    <li data-id="204" data-name="create_data">
+            <div><a href="/manual_3_2/create_data.html">数据创建</a></div>
+                    </li><li data-id="208" data-name="insert_data">
+            <div><a href="/manual_3_2/insert_data.html">数据写入</a></div>
+                    </li><li data-id="206" data-name="read_data">
+            <div><a href="/manual_3_2/read_data.html">数据读取</a></div>
+                    </li><li data-id="205" data-name="update_data">
+            <div><a href="/manual_3_2/update_data.html">数据更新</a></div>
+                    </li><li data-id="207" data-name="delete_data">
+            <div><a href="/manual_3_2/delete_data.html">数据删除</a></div>
+                    </li></ul>        </li><li data-id="36" data-name="active_record">
+            <div><a href="/manual_3_2/active_record.html">ActiveRecord</a></div>
+                    </li><li data-id="203" data-name="field_map">
+            <div><a href="/manual_3_2/field_map.html">字段映射</a></div>
+                    </li><li data-id="38" data-name="query">
+            <div><a href="/manual_3_2/query.html">查询语言</a></div>
+            <ul>
+    <li data-id="201" data-name="query_type">
+            <div><a href="/manual_3_2/query_type.html">查询方式</a></div>
+                    </li><li data-id="200" data-name="express_query">
+            <div><a href="/manual_3_2/express_query.html">表达式查询</a></div>
+                    </li><li data-id="199" data-name="fast_query">
+            <div><a href="/manual_3_2/fast_query.html">快捷查询</a></div>
+                    </li><li data-id="198" data-name="region_query">
+            <div><a href="/manual_3_2/region_query.html">区间查询</a></div>
+                    </li><li data-id="197" data-name="combine_query">
+            <div><a href="/manual_3_2/combine_query.html">组合查询</a></div>
+                    </li><li data-id="196" data-name="stat_query">
+            <div><a href="/manual_3_2/stat_query.html">统计查询</a></div>
+                    </li><li data-id="195" data-name="sql_query">
+            <div><a href="/manual_3_2/sql_query.html">SQL查询</a></div>
+                    </li><li data-id="194" data-name="dynamic_query">
+            <div><a href="/manual_3_2/dynamic_query.html">动态查询</a></div>
+                    </li><li data-id="193" data-name="sub_query">
+            <div><a href="/manual_3_2/sub_query.html">子查询</a></div>
+                    </li></ul>        </li><li data-id="43" data-name="auto_validate">
+            <div><a href="/manual_3_2/auto_validate.html">自动验证</a></div>
+                    </li><li data-id="44" data-name="auto_operate">
+            <div><a href="/manual_3_2/auto_operate.html">自动完成</a></div>
+                    </li><li data-id="216" data-name="param_bind">
+            <div><a href="/manual_3_2/param_bind.html">参数绑定</a></div>
+                    </li><li data-id="209" data-name="virtual_model">
+            <div><a href="/manual_3_2/virtual_model.html">虚拟模型</a></div>
+                    </li><li data-id="39" data-name="multi_model_layer">
+            <div><a href="/manual_3_2/multi_model_layer.html">模型分层</a></div>
+                    </li><li data-id="40" data-name="view_model">
+            <div><a href="/manual_3_2/view_model.html">视图模型</a></div>
+                    </li><li data-id="41" data-name="relation_model">
+            <div><a href="/manual_3_2/relation_model.html">关联模型</a></div>
+                    </li><li data-id="42" data-name="adv_model">
+            <div><a href="/manual_3_2/adv_model.html">高级模型</a></div>
+                    </li><li data-id="330" data-name="mongo">
+            <div><a href="/manual_3_2/mongo.html">Mongo模型</a></div>
+                    </li></ul>        </li><li data-id="11" data-name="view">
+            <div><a href="/manual_3_2/view.html">视图</a></div>
+            <ul>
+    <li data-id="61" data-name="template_define">
+            <div><a href="/manual_3_2/template_define.html">模板定义</a></div>
+                    </li><li data-id="62" data-name="template_theme">
+            <div><a href="/manual_3_2/template_theme.html">模板主题</a></div>
+                    </li><li data-id="63" data-name="template_assgin">
+            <div><a href="/manual_3_2/template_assgin.html">模板赋值</a></div>
+                    </li><li data-id="64" data-name="template_display">
+            <div><a href="/manual_3_2/template_display.html">模板渲染</a></div>
+                    </li><li data-id="212" data-name="get_template_file">
+            <div><a href="/manual_3_2/get_template_file.html">获取模板地址</a></div>
+                    </li><li data-id="66" data-name="template_fetch">
+            <div><a href="/manual_3_2/template_fetch.html">获取内容</a></div>
+                    </li><li data-id="67" data-name="template_engine">
+            <div><a href="/manual_3_2/template_engine.html">模板引擎</a></div>
+                    </li></ul>        </li><li data-id="68" data-name="template">
+            <div><a href="/manual_3_2/template.html">模板</a></div>
+            <ul>
+    <li data-id="69" data-name="var_output">
+            <div><a href="/manual_3_2/var_output.html">变量输出</a></div>
+                    </li><li data-id="70" data-name="system_var">
+            <div><a href="/manual_3_2/system_var.html">系统变量</a></div>
+                    </li><li data-id="71" data-name="use_function">
+            <div><a href="/manual_3_2/use_function.html">使用函数</a></div>
+                    </li><li data-id="213" data-name="default_val">
+            <div><a href="/manual_3_2/default_val.html">默认值输出</a></div>
+                    </li><li data-id="72" data-name="use_operate">
+            <div><a href="/manual_3_2/use_operate.html">使用运算符</a></div>
+                    </li><li data-id="73" data-name="taglib">
+            <div><a href="/manual_3_2/taglib.html">标签库</a></div>
+                    </li><li data-id="75" data-name="template_extend">
+            <div><a href="/manual_3_2/template_extend.html">模板继承</a></div>
+                    </li><li data-id="74" data-name="modify_edlim">
+            <div><a href="/manual_3_2/modify_edlim.html">修改定界符</a></div>
+                    </li><li data-id="87" data-name="three_operators">
+            <div><a href="/manual_3_2/three_operators.html">三元运算</a></div>
+                    </li><li data-id="80" data-name="include">
+            <div><a href="/manual_3_2/include.html">包含文件</a></div>
+                    </li><li data-id="79" data-name="inner_tag">
+            <div><a href="/manual_3_2/inner_tag.html">内置标签</a></div>
+            <ul>
+    <li data-id="82" data-name="volist">
+            <div><a href="/manual_3_2/volist.html">Volist标签</a></div>
+                    </li><li data-id="83" data-name="foreach">
+            <div><a href="/manual_3_2/foreach.html">Foreach标签</a></div>
+                    </li><li data-id="84" data-name="for">
+            <div><a href="/manual_3_2/for.html">For标签</a></div>
+                    </li><li data-id="85" data-name="switch">
+            <div><a href="/manual_3_2/switch.html">Switch标签</a></div>
+                    </li><li data-id="86" data-name="compare">
+            <div><a href="/manual_3_2/compare.html">比较标签</a></div>
+                    </li><li data-id="88" data-name="range">
+            <div><a href="/manual_3_2/range.html">范围判断标签</a></div>
+                    </li><li data-id="94" data-name="if">
+            <div><a href="/manual_3_2/if.html">IF标签</a></div>
+                    </li><li data-id="89" data-name="present">
+            <div><a href="/manual_3_2/present.html">Present标签</a></div>
+                    </li><li data-id="90" data-name="empty">
+            <div><a href="/manual_3_2/empty.html">Empty标签</a></div>
+                    </li><li data-id="91" data-name="defined">
+            <div><a href="/manual_3_2/defined.html">Defined标签</a></div>
+                    </li><li data-id="93" data-name="assign">
+            <div><a href="/manual_3_2/assign.html">Assign标签</a></div>
+                    </li><li data-id="92" data-name="define">
+            <div><a href="/manual_3_2/define.html">Define标签</a></div>
+                    </li><li data-id="95" data-name="tag_nest">
+            <div><a href="/manual_3_2/tag_nest.html">标签嵌套</a></div>
+                    </li><li data-id="81" data-name="import">
+            <div><a href="/manual_3_2/import.html">import标签</a></div>
+                    </li><li data-id="96" data-name="use_php">
+            <div><a href="/manual_3_2/use_php.html">使用PHP代码</a></div>
+                    </li></ul>        </li><li data-id="78" data-name="literal_output">
+            <div><a href="/manual_3_2/literal_output.html">原样输出</a></div>
+                    </li><li data-id="77" data-name="template_comment">
+            <div><a href="/manual_3_2/template_comment.html">模板注释</a></div>
+                    </li><li data-id="76" data-name="template_layout">
+            <div><a href="/manual_3_2/template_layout.html">模板布局</a></div>
+                    </li><li data-id="65" data-name="template_replace">
+            <div><a href="/manual_3_2/template_replace.html">模板替换</a></div>
+                    </li></ul>        </li><li data-id="13" data-name="debug">
+            <div><a href="/manual_3_2/debug.html">调试</a></div>
+            <ul>
+    <li data-id="111" data-name="debug_mode">
+            <div><a href="/manual_3_2/debug_mode.html">调试模式</a></div>
+                    </li><li data-id="59" data-name="exception">
+            <div><a href="/manual_3_2/exception.html">异常处理</a></div>
+                    </li><li data-id="60" data-name="log">
+            <div><a href="/manual_3_2/log.html">日志记录</a></div>
+                    </li><li data-id="136" data-name="page_trace">
+            <div><a href="/manual_3_2/page_trace.html">页面Trace</a></div>
+                    </li><li data-id="135" data-name="trace">
+            <div><a href="/manual_3_2/trace.html">Trace方法</a></div>
+                    </li><li data-id="134" data-name="var_dump">
+            <div><a href="/manual_3_2/var_dump.html">变量调试</a></div>
+                    </li><li data-id="133" data-name="performance_debug">
+            <div><a href="/manual_3_2/performance_debug.html">性能调试</a></div>
+                    </li><li data-id="132" data-name="error_debug">
+            <div><a href="/manual_3_2/error_debug.html">错误调试</a></div>
+                    </li><li data-id="131" data-name="model_debug">
+            <div><a href="/manual_3_2/model_debug.html">模型调试</a></div>
+                    </li></ul>        </li><li data-id="53" data-name="cache_operate">
+            <div><a href="/manual_3_2/cache_operate.html">缓存</a></div>
+            <ul>
+    <li data-id="54" data-name="data_cache">
+            <div><a href="/manual_3_2/data_cache.html">数据缓存</a></div>
+                    </li><li data-id="55" data-name="fast_cache">
+            <div><a href="/manual_3_2/fast_cache.html">快速缓存</a></div>
+                    </li><li data-id="56" data-name="query_cache">
+            <div><a href="/manual_3_2/query_cache.html">查询缓存</a></div>
+                    </li><li data-id="214" data-name="sql_build_cache">
+            <div><a href="/manual_3_2/sql_build_cache.html">SQL解析缓存</a></div>
+                    </li><li data-id="58" data-name="html_cache">
+            <div><a href="/manual_3_2/html_cache.html">静态缓存</a></div>
+                    </li></ul>        </li><li data-id="346" data-name="safety">
+            <div><a href="/manual_3_2/safety.html">安全</a></div>
+            <ul>
+    <li data-id="348" data-name="input_filter">
+            <div><a href="/manual_3_2/input_filter.html">输入过滤</a></div>
+                    </li><li data-id="349" data-name="check_form_legal">
+            <div><a href="/manual_3_2/check_form_legal.html">表单合法性检测</a></div>
+                    </li><li data-id="345" data-name="form_token">
+            <div><a href="/manual_3_2/form_token.html">表单令牌</a></div>
+                    </li><li data-id="353" data-name="sql_injection">
+            <div><a href="/manual_3_2/sql_injection.html">防止SQL注入</a></div>
+                    </li><li data-id="351" data-name="dir_secure">
+            <div><a href="/manual_3_2/dir_secure.html">目录安全文件</a></div>
+                    </li><li data-id="352" data-name="protected_template">
+            <div><a href="/manual_3_2/protected_template.html">保护模板文件</a></div>
+                    </li><li data-id="354" data-name="safe_upload">
+            <div><a href="/manual_3_2/safe_upload.html">上传安全</a></div>
+                    </li><li data-id="350" data-name="prevent_xss">
+            <div><a href="/manual_3_2/prevent_xss.html">防止XSS攻击</a></div>
+                    </li><li data-id="355" data-name="other_suggestion">
+            <div><a href="/manual_3_2/other_suggestion.html">其他安全建议</a></div>
+                    </li></ul>        </li><li data-id="124" data-name="extend">
+            <div><a href="/manual_3_2/extend.html">扩展</a></div>
+            <ul>
+    <li data-id="129" data-name="lib_extend">
+            <div><a href="/manual_3_2/lib_extend.html">类库扩展</a></div>
+                    </li><li data-id="128" data-name="driver_extend">
+            <div><a href="/manual_3_2/driver_extend.html">驱动扩展</a></div>
+            <ul>
+    <li data-id="323" data-name="cache_driver">
+            <div><a href="/manual_3_2/cache_driver.html">缓存驱动</a></div>
+                    </li><li data-id="324" data-name="db_driver">
+            <div><a href="/manual_3_2/db_driver.html">数据库驱动</a></div>
+                    </li><li data-id="325" data-name="log_driver">
+            <div><a href="/manual_3_2/log_driver.html">日志驱动</a></div>
+                    </li><li data-id="326" data-name="session_driver">
+            <div><a href="/manual_3_2/session_driver.html">Session驱动</a></div>
+                    </li><li data-id="327" data-name="storage_driver">
+            <div><a href="/manual_3_2/storage_driver.html">存储驱动</a></div>
+                    </li><li data-id="328" data-name="template_driver">
+            <div><a href="/manual_3_2/template_driver.html">模板引擎驱动</a></div>
+                    </li><li data-id="329" data-name="taglib_driver">
+            <div><a href="/manual_3_2/taglib_driver.html">标签库驱动</a></div>
+                    </li></ul>        </li><li data-id="127" data-name="behavior_extend">
+            <div><a href="/manual_3_2/behavior_extend.html">行为扩展</a></div>
+                    </li><li data-id="126" data-name="tag_extend">
+            <div><a href="/manual_3_2/tag_extend.html">标签扩展</a></div>
+                    </li><li data-id="125" data-name="widget_extend">
+            <div><a href="/manual_3_2/widget_extend.html">Widget扩展</a></div>
+                    </li><li data-id="331" data-name="mode_extend">
+            <div><a href="/manual_3_2/mode_extend.html">应用模式</a></div>
+                    </li></ul>        </li><li data-id="97" data-name="deploy">
+            <div><a href="/manual_3_2/deploy.html">部署</a></div>
+            <ul>
+    <li data-id="102" data-name="support_pathinfo">
+            <div><a href="/manual_3_2/support_pathinfo.html">PATH_INFO支持</a></div>
+                    </li><li data-id="101" data-name="url_rewrite">
+            <div><a href="/manual_3_2/url_rewrite.html">URL重写</a></div>
+                    </li><li data-id="100" data-name="module_deploy">
+            <div><a href="/manual_3_2/module_deploy.html">模块部署</a></div>
+                    </li><li data-id="99" data-name="domian_deploy">
+            <div><a href="/manual_3_2/domian_deploy.html">域名部署</a></div>
+                    </li><li data-id="342" data-name="bind_index">
+            <div><a href="/manual_3_2/bind_index.html">入口绑定</a></div>
+                    </li><li data-id="341" data-name="lite_file">
+            <div><a href="/manual_3_2/lite_file.html">替换入口</a></div>
+                    </li></ul>        </li><li data-id="16" data-name="special">
+            <div><a href="/manual_3_2/special.html">专题</a></div>
+            <ul>
+    <li data-id="45" data-name="session">
+            <div><a href="/manual_3_2/session.html">SESSION支持</a></div>
+                    </li><li data-id="46" data-name="cookie">
+            <div><a href="/manual_3_2/cookie.html">Cookie支持</a></div>
+                    </li><li data-id="48" data-name="language">
+            <div><a href="/manual_3_2/language.html">多语言支持</a></div>
+                    </li><li data-id="344" data-name="data_page">
+            <div><a href="/manual_3_2/data_page.html">数据分页</a></div>
+                    </li><li data-id="49" data-name="upload">
+            <div><a href="/manual_3_2/upload.html">文件上传</a></div>
+                    </li><li data-id="50" data-name="verify">
+            <div><a href="/manual_3_2/verify.html">验证码</a></div>
+                    </li><li data-id="52" data-name="image">
+            <div><a href="/manual_3_2/image.html">图像处理</a></div>
+                    </li><li data-id="243" data-name="restful">
+            <div><a href="/manual_3_2/restful.html">RESTFul</a></div>
+                    </li><li data-id="245" data-name="rpc">
+            <div><a href="/manual_3_2/rpc.html">RPC</a></div>
+                    </li><li data-id="244" data-name="sae">
+            <div><a href="/manual_3_2/sae.html">SAE</a></div>
+                    </li><li data-id="366" data-name="wechat_sdk">
+            <div><a href="/manual_3_2/wechat_sdk.html">微信SDK</a></div>
+            <ul>
+    <li data-id="367" data-name="wechat">
+            <div><a href="/manual_3_2/wechat.html">Wechat</a></div>
+                    </li><li data-id="368" data-name="wechatauth">
+            <div><a href="/manual_3_2/wechatauth.html">WechatAuth</a></div>
+                    </li></ul>        </li><li data-id="51" data-name="ip_location">
+            <div><a href="/manual_3_2/ip_location.html">IP获取和定位</a></div>
+                    </li></ul>        </li><li data-id="246" data-name="appendix">
+            <div><a href="/manual_3_2/appendix.html">附录</a></div>
+            <ul>
+    <li data-id="248" data-name="const_reference">
+            <div><a href="/manual_3_2/const_reference.html">常量参考</a></div>
+                    </li><li data-id="247" data-name="config_reference">
+            <div><a href="/manual_3_2/config_reference.html">配置参考</a></div>
+                    </li><li data-id="249" data-name="upgrade_guide">
+            <div><a href="/manual_3_2/upgrade_guide.html">升级指导</a></div>
+                    </li><li data-id="343" data-name="changelog">
+            <div><a href="/manual_3_2/changelog.html">更新日志</a></div>
+                    </li><li data-id="250" data-name="thinks">
+            <div><a href="/manual_3_2/thinks.html">鸣谢</a></div>
+                    </li></ul>        </li></ul>        </nav>
+
+   </aside>
+    <section class="layout">
+        <article class="book" data-name="relation_model" 
+            data-zclip="/Public/static/zclip"
+            data-info="/edit/info.html"
+            data-save="/edit/save.html"
+            data-upload="/edit/upload/book/1.html">
+            <header>
+                <h1>关联模型</h1>
+                <div class="copylink">
+                    <a href="javascript:;"><i class="icon icon-copy"></i>复制本页链接</a>
+                </div>
+				
+                <div class="description"></div>
+            </header>
+			<div style="z-index:1000;position:relative;width: 200px; height: 200px;border:1px solid silver;float:right;margin:10px 20px;">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:200px"
+     data-ad-client="ca-pub-2076739524120221"
+     data-ad-slot="4415179443"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+            <section class="content">
+
+                <h2>关联关系</h2>
+
+<p>通常我们所说的关联关系包括下面三种：</p>
+
+<pre><code>一对一关联 ：ONE_TO_ONE，包括HAS_ONE 和 BELONGS_TO 
+一对多关联 ：ONE_TO_MANY，包括HAS_MANY 和 BELONGS_TO
+多对多关联 ：MANY_TO_MANY
+</code></pre>
+
+<p>关联关系必然有一个参照表，例如：</p>
+
+<ul>
+<li>有一个员工档案管理系统项目，这个项目要包括下面的一些数据表：基本信息表、员工档案表、部门表、项目组表、银行卡表（用来记录员工的银行卡资料）。</li>
+<li>这些数据表之间存在一定的关联关系，我们以员工基本信息表为参照来分析和其他表之间的关联：</li>
+<li>每个员工必然有对应的员工档案资料，所以属于HAS_ONE关联；</li>
+<li>每个员工必须属于某个部门，所以属于BELONGS_TO关联；</li>
+<li>每个员工可以有多个银行卡，但是每张银行卡只可能属于一个员工，因此属于HAS_MANY关联；</li>
+<li>每个员工可以同时在多个项目组，每个项目组同时有多个员工，因此属于MANY_TO_MANY关联；</li>
+<li>分析清楚数据表之前的关联关系后，我们才可以进行关联定义和关联操作。  </li>
+</ul>
+
+<h2>关联定义</h2>
+
+<p>ThinkPHP可以很轻松的完成数据表的关联CURD操作，目前支持的关联关系包括下面四种：</p>
+
+<p><strong>HAS_ONE</strong>、<strong>BELONGS_TO</strong>、<strong>HAS_MANY</strong>和<strong>MANY_TO_MANY</strong>。</p>
+
+<p>一个模型根据业务模型的复杂程度可以同时定义多个关联，不受限制，所有的关联定义都统一在模型类的 $_link 成员变量里面定义，并且可以支持动态定义。要支持关联操作，模型类必须继承<code>Think\Model\RelationModel</code>类，关联定义的格式是：</p>
+
+<pre><code>namespace Home\Model;
+use Think\Model\RelationModel;
+class UserModel extends RelationModel{
+    protected $_link = array(
+         '关联1'  =&gt;  array(
+             '关联属性1' =&gt; '定义',
+             '关联属性N' =&gt; '定义',
+         ),
+         '关联2'  =&gt;  array(
+             '关联属性1' =&gt; '定义',
+             '关联属性N' =&gt; '定义',
+         ),
+         '关联3'  =&gt;  HAS_ONE, // 快捷定义
+         ...
+    );
+}
+</code></pre>
+
+<p>下面我们首先来分析下各个关联方式的定义：</p>
+
+<h3>HAS_ONE</h3>
+
+<p>HAS_ONE关联表示当前模型拥有一个子对象，例如，每个员工都有一个人事档案。我们可以建立一个用户模型UserModel，并且添加如下关联定义：</p>
+
+<pre><code>namespace Home\Model;
+use Think\Model\RelationModel;
+class UserModel extends RelationModel{
+     protected $_link = array(
+        'Profile'=&gt; self::HAS_ONE,
+     );
+}
+</code></pre>
+
+<p>上面是最简单的方式，表示其遵循了系统内置的数据库规范，完整的定义方式是：</p>
+
+<pre><code>namespace Home\Model;
+use Think\Model\RelationModel;
+class UserModel extends RelationModel{
+    protected $_link = array(
+        'Profile'=&gt;array(
+            'mapping_type'      =&gt; self::HAS_ONE,
+            'class_name'        =&gt; 'Profile',
+            // 定义更多的关联属性
+            ……
+            ),
+        );
+}
+</code></pre>
+
+<p>关联HAS_ONE支持的关联属性有：
+mapping_type :关联类型</p>
+
+<p>这个在HAS_ONE 关联里面必须使用HAS_ONE 常量定义。</p>
+
+<p>class_name ：要关联的模型类名</p>
+
+<p>例如，class_name 定义为Profile的话则表示和另外的Profile模型类关联，这个Profile模型类是无需定义的，系统会自动定位到相关的数据表进行关联。</p>
+
+<p>mapping_name  ：关联的映射名称，用于获取数据用</p>
+
+<p>该名称不要和当前模型的字段有重复，否则会导致关联数据获取的冲突。如果mapping_name没有定义的话，会取class_name的定义作为mapping_name。如果class_name也没有定义，则以数组的索引作为mapping_name。</p>
+
+<p>foreign_key ： 关联的外键名称</p>
+
+<p>外键的默认规则是当前数据对象名称_id，例如：
+UserModel对应的可能是表think_user （注意：think只是一个表前缀，可以随意配置）
+ 那么think_user表的外键默认为 user_id，如果不是，就必须在定义关联的时候显式定义 foreign_key 。</p>
+
+<p>condition ： 关联条件</p>
+
+<p>关联查询的时候会自动带上外键的值，如果有额外的查询条件，可以通过定义关联的condition属性。</p>
+
+<p>mapping_fields ： 关联要查询的字段</p>
+
+<p>默认情况下，关联查询的关联数据是关联表的全部字段，如果只是需要查询个别字段，可以定义关联的mapping_fields属性。</p>
+
+<p>as_fields ：直接把关联的字段值映射成数据对象中的某个字段</p>
+
+<p>这个特性是ONE_TO_ONE 关联特有的，可以直接把关联数据映射到数据对象中，而不是作为一个关联数据。当关联数据的字段名和当前数据对象的字段名称有冲突时，还可以使用映射定义。</p>
+
+<h3>BELONGS_TO</h3>
+
+<p>Belongs_to 关联表示当前模型从属于另外一个父对象，例如每个用户都属于一个部门。我们可以做如下关联定义。</p>
+
+<pre><code>'Dept' =&gt; self::BELONGS_TO
+</code></pre>
+
+<p>完整方式定义为：</p>
+
+<pre><code>'Dept' =&gt; array(
+    'mapping_type'  =&gt; self::BELONGS_TO,
+    'class_name'    =&gt; 'Dept',
+    'foreign_key'   =&gt; 'userId',
+    'mapping_name'  =&gt; 'dept',
+    // 定义更多的关联属性
+    ……
+),
+</code></pre>
+
+<p>关联BELONGS_TO定义支持的关联属性有：
+<table>
+<thead>
+<tr>
+  <th>属性</th>
+  <th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>class_name</td>
+  <td>要关联的模型类名</td>
+</tr>
+<tr>
+  <td>mapping_name</td>
+  <td>关联的映射名称，用于获取数据用 该名称不要和当前模型的字段有重复，否则会导致关联数据获取的冲突。</td>
+</tr>
+<tr>
+  <td>foreign_key</td>
+  <td>关联的外键名称</td>
+</tr>
+<tr>
+  <td>mapping_fields</td>
+  <td>关联要查询的字段</td>
+</tr>
+<tr>
+  <td>condition</td>
+  <td>关联条件</td>
+</tr>
+<tr>
+  <td>parent_key</td>
+  <td>自引用关联的关联字段 默认为parent_id 自引用关联是一种比较特殊的关联，也就是关联表就是当前表。</td>
+</tr>
+<tr>
+  <td>as_fields</td>
+  <td>直接把关联的字段值映射成数据对象中的某个字段</td>
+</tr>
+</tbody>
+</table></p>
+
+<h3>HAS_MANY</h3>
+
+<p>HAS_MANY 关联表示当前模型拥有多个子对象，例如每个用户有多篇文章，我们可以这样来定义：</p>
+
+<pre><code>'Article' =&gt; self::HAS_MANY
+</code></pre>
+
+<p>完整定义方式为：</p>
+
+<pre><code>'Article' =&gt; array(
+    'mapping_type'  =&gt; self::HAS_MANY,
+    'class_name'    =&gt; 'Article',
+    'foreign_key'   =&gt; 'userId',
+    'mapping_name'  =&gt; 'articles',
+    'mapping_order' =&gt; 'create_time desc',
+    // 定义更多的关联属性
+    ……
+),
+</code></pre>
+
+<p>关联HAS_MANY定义支持的关联属性有：
+<table>
+<thead>
+<tr>
+  <th>属性</th>
+  <th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>class_name</td>
+  <td>要关联的模型类名</td>
+</tr>
+<tr>
+  <td>mapping_name</td>
+  <td>关联的映射名称，用于获取数据用 该名称不要和当前模型的字段有重复，否则会导致关联数据获取的冲突。</td>
+</tr>
+<tr>
+  <td>foreign_key</td>
+  <td>关联的外键名称</td>
+</tr>
+<tr>
+  <td>parent_key</td>
+  <td>自引用关联的关联字段 默认为parent_id</td>
+</tr>
+<tr>
+  <td>condition</td>
+  <td>关联条件  关联查询的时候会自动带上外键的值，如果有额外的查询条件，可以通过定义关联的condition属性。</td>
+</tr>
+<tr>
+  <td>mapping_fields</td>
+  <td>关联要查询的字段 默认情况下，关联查询的关联数据是关联表的全部字段，如果只是需要查询个别字段，可以定义关联的mapping_fields属性。</td>
+</tr>
+<tr>
+  <td>mapping_limit</td>
+  <td>关联要返回的记录数目</td>
+</tr>
+<tr>
+  <td>mapping_order</td>
+  <td>关联查询的排序</td>
+</tr>
+</tbody>
+</table></p>
+
+<p>外键的默认规则是当前数据对象名称_id，例如：UserModel对应的可能是表think_user （注意：think只是一个表前缀，可以随意配置）
+ 那么think_user表的外键默认为 user_id，如果不是，就必须在定义关联的时候定义 foreign_key 。</p>
+
+<h3>MANY_TO_MANY</h3>
+
+<p>MANY_TO_MANY 关联表示当前模型可以属于多个对象，而父对象则可能包含有多个子对象，通常两者之间需要一个中间表类约束和关联。例如每个用户可以属于多个组，每个组可以有多个用户：</p>
+
+<pre><code>'Group' =&gt; self::MANY_TO_MANY
+</code></pre>
+
+<p>完整定义方式为：</p>
+
+<pre><code>'Group' =&gt; array(
+    'mapping_type'      =&gt;  self::MANY_TO_MANY,
+    'class_name'        =&gt;  'Group',
+    'mapping_name'      =&gt;  'groups',
+    'foreign_key'       =&gt;  'userId',
+    'relation_foreign_key'  =&gt;  'groupId',
+    'relation_table'    =&gt;  'think_group_user' //此处应显式定义中间表名称，且不能使用C函数读取表前缀
+    )
+</code></pre>
+
+<p>MANY_TO_MANY支持的关联属性定义有：</p>
+
+<table>
+<thead>
+<tr>
+  <th>属性</th>
+  <th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>class_name</td>
+  <td>要关联的模型类名</td>
+</tr>
+<tr>
+  <td>mapping_name</td>
+  <td>关联的映射名称，用于获取数据用 该名称不要和当前模型的字段有重复，否则会导致关联数据获取的冲突。</td>
+</tr>
+<tr>
+  <td>foreign_key</td>
+  <td>关联的外键名称 外键的默认规则是当前数据对象名称_id</td>
+</tr>
+<tr>
+  <td>relation_foreign_key</td>
+  <td>关联表的外键名称 默认的关联表的外键名称是表名_id</td>
+</tr>
+<tr>
+  <td>mapping_limit</td>
+  <td>关联要返回的记录数目</td>
+</tr>
+<tr>
+  <td>mapping_order</td>
+  <td>关联查询的排序</td>
+</tr>
+<tr>
+  <td>relation_table</td>
+  <td>多对多的中间关联表名称</td>
+</tr>
+</tbody>
+</table>
+
+<p>多对多的中间表默认表规则是：<strong>数据表前缀&#95;关联操作的主表名&#95;关联表名</strong></p>
+
+<p>如果think_user 和 think_group 存在一个对应的中间表，默认的表名应该是
+ 如果是由group来操作关联表，中间表应该是 think_group_user，如果是从user表来操作，那么应该是think_user_group，也就是说，多对多关联的设置，必须有一个Model类里面需要显式定义中间表，否则双向操作会出错。
+ 中间表无需另外的id主键（但是这并不影响中间表的操作），通常只是由 user_id 和 group_id 构成。
+ 默认会通过当前模型的getRelationTableName方法来自动获取，如果当前模型是User，关联模型是Group，那么关联表的名称也就是使用 user_group这样的格式，如果不是默认规则，需要指定relation_table属性。</p>
+
+<p><strong>3.2.2版本</strong>开始，relation_table定义支持简化写法，例如：</p>
+
+<pre><code>'relation_table'=&gt;'__USER_GROUP__'
+</code></pre>
+
+<h2>关联查询</h2>
+
+<p>由于性能问题，新版取消了自动关联查询机制，而统一使用relation方法进行关联操作，relation方法不但可以启用关联还可以控制局部关联操作，实现了关联操作一切尽在掌握之中。</p>
+
+<pre><code>$User = D("User");
+$user = $User-&gt;relation(true)-&gt;find(1);
+</code></pre>
+
+<p>输出$user结果可能是类似于下面的数据：</p>
+
+<pre><code>array(
+    'id'        =&gt; 1,
+    'account'   =&gt; 'ThinkPHP',
+    'password'  =&gt; '123456',
+    'Profile'   =&gt; array(
+        'email'     =&gt; 'liu21st@gmail.com',
+        'nickname'  =&gt; '流年',
+        ),
+    )
+</code></pre>
+
+<p>我们可以看到，用户的关联数据已经被映射到数据对象的属性里面了。其中Profile就是关联定义的mapping_name属性。</p>
+
+<p>如果我们按照下面的方式定义了as_fields属性的话，</p>
+
+<pre><code>protected $_link = array(
+    'Profile'=&gt;array(
+        'mapping_type'  =&gt; self::HAS_ONE,
+        'class_name'    =&gt; 'Profile',
+        'foreign_key'   =&gt; 'userId',
+        'as_fields' =&gt; 'email,nickname',
+        ),
+    );
+</code></pre>
+
+<p>查询的结果就变成了下面的结果</p>
+
+<pre><code>array(
+    'id'        =&gt; 1,
+    'account'   =&gt; 'ThinkPHP',
+    'password'  =&gt; 'name',
+    'email'     =&gt; 'liu21st@gmail.com',
+    'nickname'  =&gt; '流年',
+    )
+</code></pre>
+
+<p>email和nickname两个字段已经作为user数据对象的字段来显示了。</p>
+
+<p>如果关联数据的字段名和当前数据对象的字段有冲突的话，怎么解决呢？</p>
+
+<p>我们可以用下面的方式来变化下定义：</p>
+
+<pre><code>'as_fields' =&gt; 'email,nickname:username',
+</code></pre>
+
+<p>表示关联表的nickname字段映射成当前数据对象的username字段。</p>
+
+<p>默认会把所有定义的关联数据都查询出来，有时候我们并不希望这样，就可以给relation方法传入参数来控制要关联查询的。</p>
+
+<pre><code>$User = D("User");
+$user = $User-&gt;relation('Profile')-&gt;find(1);
+</code></pre>
+
+<p>关联查询一样可以支持select方法，如果要查询多个数据，并同时获取相应的关联数据，可以改成：</p>
+
+<pre><code>$User = D("User");
+$list = $User-&gt;relation(true)-&gt;Select();
+</code></pre>
+
+<p>如果希望在完成的查询基础之上 再进行关联数据的查询，可以使用</p>
+
+<pre><code>$User = D("User");
+$user = $User-&gt;find(1);
+// 表示对当前查询的数据对象进行关联数据获取
+$profile = $User-&gt;relationGet("Profile");
+</code></pre>
+
+<p>事实上，除了当前的参考模型User外，其他的关联模型是不需要创建的。</p>
+
+<h2>关联操作</h2>
+
+<p>除了关联查询外，系统也支持关联数据的自动写入、更新和删除</p>
+
+<h3>关联写入</h3>
+
+<pre><code>$User = D("User");
+$data = array();
+$data["account"]    = "ThinkPHP";
+$data["password"]   = "123456";
+$data["Profile"]    = array(
+  'email'    =&gt;'liu21st@gmail.com',
+  'nickname'    =&gt;'流年',
+);
+$result = $User-&gt;relation(true)-&gt;add($data);
+</code></pre>
+
+<p>这样就会自动写入关联的Profile数据。</p>
+
+<p>同样，可以使用参数来控制要关联写入的数据：</p>
+
+<pre><code>$result = $User-&gt;relation("Profile")-&gt;add($data);
+</code></pre>
+
+<blockquote>
+  <p>当MANY_TO_MANY时，不建议使用关联插入。</p>
+</blockquote>
+
+<h3>关联更新</h3>
+
+<p>数据的关联更新和关联写入类似</p>
+
+<pre><code>$User = D("User");
+$data["account"]    = "ThinkPHP";
+$data["password"]   = "123456";
+$data["Profile"]    = array(
+     'email'    =&gt;'liu21st@gmail.com',
+     'nickname'    =&gt;'流年',
+);
+$result = $User-&gt; relation(true)-&gt;where(array('id'=&gt;3))-&gt;save($data);
+</code></pre>
+
+<p>Relation(true)会关联保存User模型定义的所有关联数据，如果只需要关联保存部分数据，可以使用：</p>
+
+<pre><code>$result = $User-&gt;relation("Profile")-&gt;save($data);
+</code></pre>
+
+<p>这样就只会同时更新关联的Profile数据。</p>
+
+<p>关联保存的规则：</p>
+
+<p><strong>HAS_ONE</strong>： 关联数据的更新直接赋值</p>
+
+<p><strong>HAS_MANY</strong>： 的关联数据如果传入主键的值 则表示更新 否则就表示新增</p>
+
+<p><strong>MANY_TO_MANY</strong>： 的数据更新是删除之前的数据后重新写入</p>
+
+<h3>关联删除</h3>
+
+<pre><code>//删除用户ID为3的记录的同时删除关联数据
+$result = $User-&gt;relation(true)-&gt;delete("3");
+// 如果只需要关联删除部分数据，可以使用
+$result = $User-&gt;relation("Profile")-&gt;delete("3");
+</code></pre>
+            </section>
+            <footer>
+                
+            </footer>
+        </article>
+		<div style="margin:10px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 横幅728*90 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2076739524120221"
+     data-ad-slot="9333957843"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+    </section>
+    <footer class="layout">
+        <p class="copyright">&copy;2013 <a href="http://www.thinkphp.cn" target="_blank">ThinkPHP</a>文档中心 由 <a href="http://www.onethink.cn" target="_blank">OneThink</a> 强力驱动</p>
+    </footer>
+    <div id="loading"></div>
+    <div id="login">
+        <div class="login-header">
+            <span class="login-title">用户登录</span>
+            <span class="login-close"></span>
+        </div>
+        <div class="login-body">
+
+        </div>
+        <div class="login-footer">
+            <div class="login-status"></div>
+            <div class="login-tools">
+                <button class="login-btn-ok">确定</button>
+                <button class="login-btn-cancel">取消</button>
+            </div>
+        </div>
+    </div>
+        <!--[if lt IE 9]>
+    <script type="text/javascript" src="/Public/static/jquery-1.10.2.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>
+    <!--<![endif]-->
+    <script type="text/javascript" src="/Public/static/thinktree/jquery.thinktree.js"></script>
+    <script type="text/javascript" src="/Public/static/jquery.thinkkeyboard.js"></script>
+    <script type="text/javascript" src="/Public/static/prettify/prettify.js"></script>
+    <script type="text/javascript" src="/Public/static/prettify/lang-css.js"></script>
+    <script type="text/javascript" src="/Public/static/zclip/jquery.zclip.js"></script>
+    <script type="text/javascript" src="/Public/Document/js/document.js"></script>
+    <script type="text/javascript" src="/Public/Document/js/manage.js"></script>
+    <script type="text/javascript">Article.init();/* 初始文档对象 */</script>
+        <div style="display:none">
+	<script type="text/javascript" src="http://tajs.qq.com/stats?sId=8891584" charset="UTF-8"></script>
+    </div>
+    	
+    </div>
+</body>
+</html>

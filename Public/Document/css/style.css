@@ -1,0 +1,311 @@
+/* 图标样式 */
+.icon{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: 0 2px 2px 0;
+    background: url(../images/bg.png) no-repeat;
+    vertical-align: middle;
+}
+.icon-copy{
+    background-position: 0 0;
+}
+.icon-file-pdf{
+    background-position: -20px 0;
+}
+.icon-file-chm{
+    background-position: -40px 0;
+}
+
+/* 头部样式 */
+.header hgroup{
+    float: left;
+    margin: 15px 20px 0 22px;
+}
+.header hgroup h1{
+    color: #FFF;
+    font-size: 32px;
+    line-height: 1;
+    text-shadow: 1px 1px 0 #000, 1px 1px 5px rgba(255, 255, 255, 0.8);
+}
+.header hgroup h2{
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.header ul.operation{
+    float: right;
+    padding: 46px 10px 0 0;
+}
+.header ul.operation li{
+    float: left;
+    padding: 0 6px;
+    position: relative;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.header ul.operation li a{
+    color: #FFF;
+}
+.header ul.operation li a:hover{
+    text-decoration: underline;
+}
+
+/* Search style */
+.search input{
+    height: 28px;
+    line-height: 18px;
+    width: 100%;
+    border: 1px solid #CCC;
+    padding: 0 8px;
+    font-size: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075) inset;
+    -webkit-border-radius: 14px;
+       -moz-border-radius: 14px;
+            border-radius: 14px;
+    -webkit-transition: background-color .5s ease-in;
+       -moz-transition: background-color .5s ease-in;
+        -ms-transition: background-color .5s ease-in;
+         -o-transition: background-color .5s ease-in;
+            transition: all 0.15s ease-in;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+.search input:focus{
+    border-color: #51A7E8;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075) inset, 0 0 5px rgba(81, 167, 232, 0.5);
+}
+.thinktree-search li a,
+.thinktree-search li span{
+    color: #CCC;
+}
+.thinktree-search li.searched > div a,
+.thinktree-search li.searched > div span{
+    color: #0382AD;
+    font-weight: bold;
+}
+
+/* 文章样式 */
+article{
+    margin: 5px 16px 16px;
+    font-size: 16px;
+}
+article a{
+    color: #008000;
+}
+article a.hover,
+article a:hover{
+    color: #C30;
+    text-decoration: underline;
+}
+article .zclip embed {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+article header h1{
+    float: left;
+    font-size: 25px;
+    color: #0382AD;
+    text-shadow: 1px 1px 0 #FFFFFF, 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+article header .copylink{
+    position: relative;
+    float: left;
+    margin: 10px 0 0 10px;
+}
+article header .copylink a{
+    vertical-align: middle;
+}
+article header .description{
+    clear: both;
+    background-color: #C3E1FF;
+    border-top: 1px solid #4E6B33;
+    clear: both;
+    padding: 2px 6px;
+    font-family: "宋体";
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* 文章内容样式 */
+article section.content{
+    
+}
+article section.content h1,
+article section.content h2{
+    font-size: 20px;
+    margin-top: 16px;
+    border-bottom: 1px solid #EEE;
+}
+article section.content h3,
+article section.content h4,
+article section.content h5,
+article section.content h6{
+    font-size: 16px;
+    margin-top: 14px;
+}
+article section.content p{
+    padding: 8px 0;
+}
+article section.content ul{
+    list-style: circle;
+    padding-left: 20px;
+}
+article section.content ol{
+    list-style: decimal;
+    padding-left: 20px;
+}
+article section.content blockquote{
+    border-left: 5px solid #D0E3F0;
+    margin: 8px 0;
+    padding: 8px 16px;
+    background-color: #F0F7FD;
+    color: #0382AD;
+}
+article section.content table{
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+}
+article section.content tbody tr:nth-child(odd){
+    background-color: #F9F9F9;
+}
+article section.content th{
+    padding: 6px;
+    text-align: left;
+    border: 1px solid #DDD;
+    border-top: 0 none;
+    border-right: 0 none;
+}
+article section.content td{
+    padding: 6px;
+    text-align: left;
+    border: 1px solid #DDD;
+    border-right: 0 none;
+    border-bottom: 0 none;
+}
+article section.content th:first-child,
+article section.content td:first-child{
+    border-left: 0 none;
+}
+article section.content tbody tr:hover td{
+    background-color: #F1F4FF;
+}
+article section.content code{
+    font-family: Consolas, "Liberation Mono", Courier, "微软雅黑";
+    background-color: #F9F2F4;
+    color: #C7254E;
+    padding: 2px 4px;
+    margin: 0 2px;
+    white-space: nowrap;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+}
+article section.content pre{
+    position: relative;
+    font-family: Consolas, "Liberation Mono", Courier, "微软雅黑";
+    background-color: #F9F9F9;
+    border: 1px solid #DDD;
+    color: #333;
+    display: block;
+    margin: 0;
+    padding: 6px;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+}
+article section.content pre ol{
+    color:#2BA5D8;
+    padding-left: 36px;
+}
+article section.content pre.webkit ol{
+    /* 解决chrome浏览器数字不居中的问题 */
+    padding-left: 42px;
+}
+article section.content pre li{
+    border-left: 1px solid #DDD;
+}
+article section.content pre code{
+    background-color: transparent;
+    color: #333;
+    padding: 0 0 0 2px;
+    white-space: pre-wrap;
+    margin: 0;
+    border-left: 1px solid #FFF;
+    height: 100%;
+    vertical-align: top;
+    display: inline-block;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+}
+article section.content pre .copycode{
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+    border: 1px solid #DDD;
+    border-top: 0 none;
+    border-right: 0 none;
+    -webkit-border-bottom-left-radius: 3px;
+        -moz-border-radius-bottomleft: 3px;
+            border-bottom-left-radius: 3px;
+}
+article section.content pre .copycode a{
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 10px;
+    display: inline-block;
+}
+article section.content pre .copycode.hover,
+article section.content pre:hover .copycode{
+    display: block;
+}
+
+article section.content h1 + table,
+article section.content h2 + table,
+article section.content h1 + pre,
+article section.content h2 + pre{
+    margin-top: 8px;
+}
+
+/* 编辑区域样式 */
+.editable{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 16px solid #C30;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    cursor: pointer;
+}
+.editor{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.editor textarea{
+    line-height: 22px;
+}
+.editor + article{
+    display: none;
+}
+
+
+/* 版权样式 */
+.copyright{
+    text-align: center;
+    line-height: 36px;
+}

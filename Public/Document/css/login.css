@@ -1,0 +1,122 @@
+/* 基础样式 */
+html,body {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color:#404040;
+    background-color:#fff;
+    height: 100%;
+}
+/* 登录框样式 */
+.login{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -135px auto auto -200px;
+    width: 400px;
+    height: 270px;
+    overflow: hidden;
+}
+.login-form-header{
+    background-color: #6C8393;
+    background-image: linear-gradient(#7F95A5, #6C8393);
+    background-repeat: repeat-x;
+    border-color: #6E8290 #6E8290 #586873;
+    border-image: none;
+    border-radius: 4px 4px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 10px 20px;
+    position: relative;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+.login-form-header h1 {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+.login-form-body{
+    background-color: #FFFFFF;
+    border-color: #FFFFFF #D8DEE2 #D8DEE2;
+    border-image: none;
+    border-radius: 0 0 4px 4px;
+    border-right: 1px solid #D8DEE2;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    padding: 20px;
+}
+.login-form-body label{
+    font-weight: 700;
+    color: #333;
+}
+.login-form-body input{
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 1px solid #CCC;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075) inset;
+    min-height: 34px;
+    outline: medium none;
+    padding: 7px 8px;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    -webkit-transition: background-color .5s ease-in;
+       -moz-transition: background-color .5s ease-in;
+        -ms-transition: background-color .5s ease-in;
+         -o-transition: background-color .5s ease-in;
+            transition: all 0.15s ease-in;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+.login-form-body input:focus{
+    border-color: #51A7E8;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075) inset, 0 0 5px rgba(81, 167, 232, 0.5);
+}
+.login-form-body .btn{
+    background-color: #EAEAEA;
+    background-image: -moz-linear-gradient(top, #FAFAFA, #EAEAEA);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FAFAFA), to(#EAEAEA));
+    background-image: -webkit-linear-gradient(top, #FAFAFA, #EAEAEA);
+    background-image: -o-linear-gradient(top, #FAFAFA, #EAEAEA);
+    background-image: linear-gradient(to bottom, #FAFAFA, #EAEAEA);
+    background-repeat: repeat-x;
+    border-color: #DDD #DDD #C5C5C5;
+    border-image: none;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 7px 15px;
+    position: relative;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.login-form-body .btn:hover{
+    background-color: #DADADA;
+    background-image: -moz-linear-gradient(top, #EAEAEA, #DADADA);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#EAEAEA), to(#DADADA));
+    background-image: -webkit-linear-gradient(top, #EAEAEA, #DADADA);
+    background-image: -o-linear-gradient(top, #EAEAEA, #DADADA);
+    background-image: linear-gradient(to bottom, #EAEAEA, #DADADA);
+    background-repeat: repeat-x;
+    border-color: #CCC #CCC #B5B5B5;
+    text-decoration: none;
+}
+.login-form-body span{
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 13px;
+    color: red;
+}
