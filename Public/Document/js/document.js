@@ -130,11 +130,15 @@ Doc = {
         this.content.find("a[href^='http://'],a[href^='https://']").attr("target", "_blank");
 
         /* 复制当前地址 */
-        $copylink.find("a").zclip({
-            "path"      : $article.data("zclip") + "/ZeroClipboard.swf",
-            "copy"      : function(){return $menu.find("li.active > div a")[0].href},
-            "afterCopy" : function(){}
-        });
+        if(location.host !== 'localhost'){
+			$copylink.find("a").zclip({
+				"path"      : $article.data("zclip") + "/ZeroClipboard.swf",
+				"copy"      : function(){return $menu.find("li.active > div a")[0].href},
+				"afterCopy" : function(){}
+			});
+		} else {
+			$copylink.find("a").remove();
+		}
 
         /* 快捷键的支持 */
         $doc.thinkkeyboard({
@@ -264,14 +268,16 @@ Doc = {
         //调用高亮插件，高亮代码
         prettyPrint();
 
-        //复制代码
-        $code.append("<div class=\"copycode hover\"><a href=\"javascript:;\">复制代码</a></div>");
-        /* 复制代码 */
-        $code.find(".copycode a").zclip({
-            "path"      : this.article.data("zclip") + "/ZeroClipboard.swf",
-            "copy"      : function(){return $(this).closest("pre").data("code")},
-            "afterCopy" : function(){}
-        }).parent().removeClass("hover");
+		if(location.host !== 'localhost'){
+			//复制代码
+			$code.append("<div class=\"copycode hover\"><a href=\"javascript:;\">复制代码</a></div>");
+			/* 复制代码 */
+			$code.find(".copycode a").zclip({
+				"path"      : this.article.data("zclip") + "/ZeroClipboard.swf",
+				"copy"      : function(){return $(this).closest("pre").data("code")},
+				"afterCopy" : function(){}
+			}).parent().removeClass("hover");
+		}
 
         return this;
     },
